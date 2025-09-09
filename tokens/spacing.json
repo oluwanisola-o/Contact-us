@@ -1,0 +1,12 @@
+{
+  "size": {
+    "radius": {
+      "pill": {
+        "value": "999px"
+      },
+      "xxl": {
+        "value": "24px"
+      }
+    }
+  }
+}

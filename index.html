@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waitlist Popup</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <main class="popup" role="main">
+    <section class="popup__left">
+      <header class="popup__header">
+        <h1 class="heading">We’re not available in Sweden...yet!</h1>
+        <p class="subtext">Sign up for the waitlist, and we’ll notify you as soon as we get there.</p>
+      </header>
+
+      <form class="popup__form" action="#" method="post">
+        <label class="field">
+          <span class="field__label">Name</span>
+          <input class="field__input" type="text" name="name" placeholder="Your name" autocomplete="name" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Email</span>
+          <input class="field__input" type="email" name="email" placeholder="Your email" autocomplete="email" required />
+        </label>
+
+        <label class="select">
+          <span class="field__label">Country</span>
+          <div class="select__control">
+            <select name="country" aria-label="Select country">
+              <option value="Sweden" selected>Sweden</option>
+              <option value="Norway">Norway</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Finland">Finland</option>
+              <option value="Iceland">Iceland</option>
+            </select>
+            <span class="select__chevron" aria-hidden="true"></span>
+          </div>
+        </label>
+
+        <button class="button" type="submit">Join&nbsp; Waitlist</button>
+
+        <p class="terms">By submitting this form, you agree to receive updates and occasional marketing communication from us.</p>
+      </form>
+    </section>
+
+    <aside class="popup__right" aria-hidden="true">
+      <img src="Contact Waitlist image.jpg" alt="">
+    </aside>
+  </main>
+</body>
+</html>
+
+
