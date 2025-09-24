@@ -12,7 +12,15 @@
   "devDependencies": {
     "style-dictionary": "^3.9.0"
   },
-  "keywords": ["style-dictionary", "design-tokens", "waitlist", "popup"],
+  "keywords": [
+    "style-dictionary",
+    "design-tokens",
+    "waitlist",
+    "popup"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
