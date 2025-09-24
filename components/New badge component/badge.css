@@ -1,0 +1,515 @@
+/* Forge Badge Component - Design Token Implementation */
+/* Extracted from Figma Design System */
+
+/* Design Tokens - Converted from Figma Variables */
+:root {
+  /* Colors */
+  --forge-color-primary: #2b62ed;
+  --forge-color-secondary: #d17b3b;
+  --forge-color-error: #d42620;
+  --forge-color-warning: #c28213;
+  --forge-color-success: #0f973d;
+  --forge-color-neutral: #2a303c;
+  --forge-color-text-on-brand: #ffffff;
+  --forge-color-text-primary: #080a0c;
+  --forge-color-text-secondary: #555963;
+  --forge-color-background-subtle: #f0f1f3;
+  --forge-color-border-strong: #7f838a;
+  
+  /* Typography */
+  --forge-font-family-body: 'Geist', sans-serif;
+  --forge-font-family-heading: 'Switzer', sans-serif;
+  --forge-font-weight-medium: 500;
+  --forge-font-weight-regular: 400;
+  --forge-font-weight-semibold: 600;
+  
+  /* Font Sizes */
+  --forge-font-size-large: 16px;
+  --forge-font-size-medium: 14px;
+  --forge-font-size-small: 10px;
+  
+  /* Line Heights */
+  --forge-line-height-large: 24px;
+  --forge-line-height-medium: 20px;
+  --forge-line-height-small: 14px;
+  
+  /* Spacing */
+  --forge-space-0: 0;
+  --forge-space-4: 4px;
+  --forge-space-12: 12px;
+  --forge-space-16: 16px;
+  --forge-space-24: 24px;
+  --forge-space-32: 32px;
+  
+  /* Border Radius */
+  --forge-radius-large: 24px;
+  --forge-radius-medium: 16px;
+  --forge-radius-small: 12px;
+  
+  /* Border Width */
+  --forge-border-width: 1px;
+  
+  /* Icon Sizes */
+  --forge-icon-size-large: 16px;
+  --forge-icon-size-medium: 14px;
+  --forge-icon-size-small: 12px;
+}
+
+/* Base Badge Component */
+.forge-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: var(--forge-font-family-body);
+  font-weight: var(--forge-font-weight-medium);
+  border-radius: var(--forge-radius-large);
+  position: relative;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+/* Size Variants */
+.forge-badge--large {
+  padding: 0 var(--forge-space-12);
+  height: var(--forge-space-24);
+  font-size: var(--forge-font-size-large);
+  line-height: var(--forge-line-height-large);
+}
+
+.forge-badge--medium {
+  padding: 0 var(--forge-space-12);
+  height: 20px;
+  font-size: var(--forge-font-size-medium);
+  line-height: var(--forge-line-height-medium);
+}
+
+.forge-badge--small {
+  padding: 0 var(--forge-space-12);
+  height: 14px;
+  font-size: var(--forge-font-size-small);
+  line-height: var(--forge-line-height-small);
+}
+
+/* Type Variants - Filled Style */
+.forge-badge--primary {
+  background-color: var(--forge-color-primary);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--secondary {
+  background-color: var(--forge-color-secondary);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--error {
+  background-color: var(--forge-color-error);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--warning {
+  background-color: var(--forge-color-warning);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--success {
+  background-color: var(--forge-color-success);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--neutral {
+  background-color: var(--forge-color-neutral);
+  color: var(--forge-color-text-on-brand);
+}
+
+/* Style Variants - Filled + Stroke */
+.forge-badge--filled-stroke {
+  position: relative;
+}
+
+.forge-badge--filled-stroke::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: var(--forge-border-width) solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--forge-radius-large);
+  pointer-events: none;
+}
+
+.forge-badge--filled-stroke.forge-badge--primary {
+  background-color: var(--forge-color-primary);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--filled-stroke.forge-badge--secondary {
+  background-color: var(--forge-color-secondary);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--filled-stroke.forge-badge--error {
+  background-color: var(--forge-color-error);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--filled-stroke.forge-badge--warning {
+  background-color: var(--forge-color-warning);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--filled-stroke.forge-badge--success {
+  background-color: var(--forge-color-success);
+  color: var(--forge-color-text-on-brand);
+}
+
+.forge-badge--filled-stroke.forge-badge--neutral {
+  background-color: var(--forge-color-neutral);
+  color: var(--forge-color-text-on-brand);
+}
+
+/* Style Variants - Soft Fill + Stroke */
+.forge-badge--soft-fill-stroke {
+  background-color: transparent;
+  border: var(--forge-border-width) solid;
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--primary {
+  color: var(--forge-color-primary);
+  border-color: var(--forge-color-primary);
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--secondary {
+  color: var(--forge-color-secondary);
+  border-color: var(--forge-color-secondary);
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--error {
+  color: var(--forge-color-error);
+  border-color: var(--forge-color-error);
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--warning {
+  color: var(--forge-color-warning);
+  border-color: var(--forge-color-warning);
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--success {
+  color: var(--forge-color-success);
+  border-color: var(--forge-color-success);
+}
+
+.forge-badge--soft-fill-stroke.forge-badge--neutral {
+  color: var(--forge-color-neutral);
+  border-color: var(--forge-color-neutral);
+}
+
+/* Style Variants - Stroke Only */
+.forge-badge--stroke {
+  background-color: transparent;
+  border: var(--forge-border-width) solid;
+}
+
+.forge-badge--stroke.forge-badge--primary {
+  color: var(--forge-color-primary);
+  border-color: var(--forge-color-primary);
+}
+
+.forge-badge--stroke.forge-badge--secondary {
+  color: var(--forge-color-secondary);
+  border-color: var(--forge-color-secondary);
+}
+
+.forge-badge--stroke.forge-badge--error {
+  color: var(--forge-color-error);
+  border-color: var(--forge-color-error);
+}
+
+.forge-badge--stroke.forge-badge--warning {
+  color: var(--forge-color-warning);
+  border-color: var(--forge-color-warning);
+}
+
+.forge-badge--stroke.forge-badge--success {
+  color: var(--forge-color-success);
+  border-color: var(--forge-color-success);
+}
+
+.forge-badge--stroke.forge-badge--neutral {
+  color: var(--forge-color-neutral);
+  border-color: var(--forge-color-neutral);
+}
+
+/* Icon Support */
+.forge-badge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.forge-badge--large .forge-badge__icon {
+  width: var(--forge-icon-size-large);
+  height: var(--forge-icon-size-large);
+}
+
+.forge-badge--medium .forge-badge__icon {
+  width: var(--forge-icon-size-medium);
+  height: var(--forge-icon-size-medium);
+}
+
+.forge-badge--small .forge-badge__icon {
+  width: var(--forge-icon-size-small);
+  height: var(--forge-icon-size-small);
+}
+
+/* Icon Positioning */
+.forge-badge--icon-leading {
+  padding-left: var(--forge-space-12);
+}
+
+.forge-badge--icon-leading .forge-badge__icon {
+  margin-right: var(--forge-space-4);
+}
+
+.forge-badge--icon-trailing {
+  padding-right: var(--forge-space-12);
+}
+
+.forge-badge--icon-trailing .forge-badge__icon {
+  margin-left: var(--forge-space-4);
+}
+
+/* Icon with extra padding for proper spacing */
+.forge-badge--icon-leading.forge-badge--large {
+  padding-left: var(--forge-space-12);
+}
+
+.forge-badge--icon-trailing.forge-badge--large {
+  padding-right: var(--forge-space-12);
+}
+
+.forge-badge--icon-leading.forge-badge--medium {
+  padding-left: var(--forge-space-12);
+}
+
+.forge-badge--icon-trailing.forge-badge--medium {
+  padding-right: var(--forge-space-12);
+}
+
+.forge-badge--icon-leading.forge-badge--small {
+  padding-left: var(--forge-space-12);
+}
+
+.forge-badge--icon-trailing.forge-badge--small {
+  padding-right: var(--forge-space-12);
+}
+
+/* Content Container */
+.forge-badge__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--forge-space-4);
+}
+
+/* Hover States */
+.forge-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus States */
+.forge-badge:focus {
+  outline: 2px solid var(--forge-color-primary);
+  outline-offset: 2px;
+}
+
+/* Disabled State */
+.forge-badge--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .forge-badge--large {
+    font-size: 14px;
+    height: 20px;
+  }
+  
+  .forge-badge--medium {
+    font-size: 12px;
+    height: 18px;
+  }
+  
+  .forge-badge--small {
+    font-size: 10px;
+    height: 14px;
+  }
+}
+
+/* Figma Layout Styles */
+.figma-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Spacing between section groups */
+  align-items: flex-start;
+}
+
+.badge-section-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.section-group-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a303c;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.badge-row {
+  display: flex;
+  align-items: center;
+  gap: 13px; /* Exact spacing from Figma coordinates */
+  margin-bottom: 10px; /* Vertical spacing between rows */
+}
+
+.figma-gap {
+  width: 80px; /* Exact gap as specified in Figma */
+  height: 1px;
+  margin: 20px 0;
+}
+
+/* Utility Classes for Demo */
+.badge-showcase {
+  display: grid;
+  gap: var(--forge-space-16);
+  padding: var(--forge-space-24);
+  background-color: var(--forge-color-background-subtle);
+  min-height: 100vh;
+}
+
+.badge-section {
+  background-color: white;
+  border-radius: var(--forge-radius-medium);
+  padding: var(--forge-space-24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--forge-space-16);
+  margin-top: var(--forge-space-16);
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--forge-space-8);
+  padding: var(--forge-space-16);
+  border: 1px solid var(--forge-color-background-subtle);
+  border-radius: var(--forge-radius-small);
+  background-color: white;
+}
+
+.badge-label {
+  font-size: 12px;
+  color: var(--forge-color-text-secondary);
+  text-align: center;
+  font-weight: var(--forge-font-weight-medium);
+}
+
+/* Statistics Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--forge-space-16);
+  margin-bottom: var(--forge-space-24);
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--forge-color-primary), var(--forge-color-secondary));
+  color: white;
+  padding: var(--forge-space-24);
+  border-radius: var(--forge-radius-medium);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: var(--forge-font-weight-semibold);
+  margin-bottom: var(--forge-space-4);
+}
+
+.stat-label {
+  font-size: var(--forge-font-size-medium);
+  opacity: 0.9;
+}
+
+/* Design Tokens Reference */
+.tokens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--forge-space-16);
+}
+
+.token-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--forge-space-12);
+  border: 1px solid var(--forge-color-background-subtle);
+  border-radius: var(--forge-radius-small);
+  background-color: white;
+}
+
+.token-name {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: var(--forge-font-size-small);
+  color: var(--forge-color-text-primary);
+}
+
+.token-value {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: var(--forge-font-size-small);
+  color: var(--forge-color-text-secondary);
+  background-color: var(--forge-color-background-subtle);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* CSS Classes Reference */
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--forge-space-12);
+}
+
+.class-item {
+  padding: var(--forge-space-12);
+  border: 1px solid var(--forge-color-background-subtle);
+  border-radius: var(--forge-radius-small);
+  background-color: white;
+}
+
+.class-name {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: var(--forge-font-size-small);
+  color: var(--forge-color-primary);
+  font-weight: var(--forge-font-weight-medium);
+  margin-bottom: var(--forge-space-4);
+}
+
+.class-description {
+  font-size: var(--forge-font-size-small);
+  color: var(--forge-color-text-secondary);
+  line-height: 1.4;
+}

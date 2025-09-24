@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge Badge Component - Design System Showcase</title>
+    <link rel="stylesheet" href="badge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2b62ed, #d17b3b);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2a303c;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2b62ed;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+            color: #555963;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Forge Badge Component</h1>
+        <p>Pixel-perfect implementation extracted from Figma Design System</p>
+    </div>
+
+    <div class="badge-showcase">
+        <!-- Section 1: Component Overview - Statistics -->
+        <div class="badge-section">
+            <h2 class="section-title">Component Overview</h2>
+            <p class="section-subtitle">Extracted variant counts and design system statistics</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Types</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Sizes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Styles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Icon States</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">144</div>
+                    <div class="stat-label">Total Variants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Style Groups</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Design Tokens</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Component Showcase - Complete Figma Layout -->
+        <div class="badge-section">
+            <h2 class="section-title">Component Showcase</h2>
+            <p class="section-subtitle">Complete layout with all variants as shown in Figma design system</p>
+            
+            <!-- Complete Figma Layout Container -->
+            <div class="figma-layout">
+                <!-- Section 1: Filled Style (No Icons) -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled Style</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary">Label</div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary">Label</div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--error">Label</div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning">Label</div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--success">Label</div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral">Label</div>
+                    </div>
+                </div>
+                
+                <!-- Section 2: Filled + Stroke Style (No Icons) -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled + Stroke Style</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--filled-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--filled-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--filled-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--filled-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--filled-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--filled-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--filled-stroke">Label</div>
+                    </div>
+                </div>
+                
+                <!-- Section 3: Filled Style with Trailing Icons -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled Style with Trailing Icons</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 4: Filled Style with Leading Icons -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled Style with Leading Icons</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 5: Filled + Stroke Style with Trailing Icons -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled + Stroke Style with Trailing Icons</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-trailing">
+                            <span>Label</span>
+                            <div class="forge-badge__icon">→</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 6: Filled + Stroke Style with Leading Icons -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Filled + Stroke Style with Leading Icons</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--filled-stroke forge-badge--icon-leading">
+                            <div class="forge-badge__icon">→</div>
+                            <span>Label</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 7: Soft Fill + Stroke Style (No Icons) -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Soft Fill + Stroke Style</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--soft-fill-stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--soft-fill-stroke">Label</div>
+                    </div>
+                </div>
+                
+                <!-- Section 8: Stroke Only Style (No Icons) -->
+                <div class="badge-section-group">
+                    <h3 class="section-group-title">Stroke Only Style</h3>
+                    <!-- Row 1: Primary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--primary forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--primary forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--primary forge-badge--stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 2: Secondary (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--secondary forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--secondary forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--secondary forge-badge--stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 3: Error (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--error forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--error forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--error forge-badge--stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 4: Warning (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--warning forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--warning forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--warning forge-badge--stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 5: Success (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--success forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--success forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--success forge-badge--stroke">Label</div>
+                    </div>
+                    
+                    <!-- Row 6: Neutral (Large, Medium, Small) -->
+                    <div class="badge-row">
+                        <div class="forge-badge forge-badge--large forge-badge--neutral forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--medium forge-badge--neutral forge-badge--stroke">Label</div>
+                        <div class="forge-badge forge-badge--small forge-badge--neutral forge-badge--stroke">Label</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Design Tokens Reference -->
+        <div class="badge-section">
+            <h2 class="section-title">Design Tokens Reference</h2>
+            <p class="section-subtitle">Figma variables → CSS custom properties mapping</p>
+            
+            <div class="tokens-grid">
+                <div class="token-item">
+                    <span class="token-name">--forge-color-primary</span>
+                    <span class="token-value">#2b62ed</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-secondary</span>
+                    <span class="token-value">#d17b3b</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-error</span>
+                    <span class="token-value">#d42620</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-warning</span>
+                    <span class="token-value">#c28213</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-success</span>
+                    <span class="token-value">#0f973d</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-neutral</span>
+                    <span class="token-value">#2a303c</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-text-on-brand</span>
+                    <span class="token-value">#ffffff</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-text-primary</span>
+                    <span class="token-value">#080a0c</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-color-text-secondary</span>
+                    <span class="token-value">#555963</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-font-family-body</span>
+                    <span class="token-value">'Geist', sans-serif</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-font-size-large</span>
+                    <span class="token-value">16px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-font-size-medium</span>
+                    <span class="token-value">14px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-font-size-small</span>
+                    <span class="token-value">10px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-line-height-large</span>
+                    <span class="token-value">24px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-line-height-medium</span>
+                    <span class="token-value">20px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-line-height-small</span>
+                    <span class="token-value">14px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-space-4</span>
+                    <span class="token-value">4px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-space-12</span>
+                    <span class="token-value">12px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-space-16</span>
+                    <span class="token-value">16px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-space-24</span>
+                    <span class="token-value">24px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-radius-large</span>
+                    <span class="token-value">24px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-radius-medium</span>
+                    <span class="token-value">16px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-border-width</span>
+                    <span class="token-value">1px</span>
+                </div>
+                <div class="token-item">
+                    <span class="token-name">--forge-font-weight-medium</span>
+                    <span class="token-value">500</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: CSS Classes Reference -->
+        <div class="badge-section">
+            <h2 class="section-title">CSS Classes Reference</h2>
+            <p class="section-subtitle">Generated classes with --forge- prefix</p>
+            
+            <div class="classes-grid">
+                <div class="class-item">
+                    <div class="class-name">.forge-badge</div>
+                    <div class="class-description">Base badge component class with foundational styles</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--large</div>
+                    <div class="class-description">Large size variant (24px height, 16px font)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--medium</div>
+                    <div class="class-description">Medium size variant (20px height, 14px font)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--small</div>
+                    <div class="class-description">Small size variant (14px height, 10px font)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--primary</div>
+                    <div class="class-description">Primary color variant (#2b62ed)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--secondary</div>
+                    <div class="class-description">Secondary color variant (#d17b3b)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--error</div>
+                    <div class="class-description">Error color variant (#d42620)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--warning</div>
+                    <div class="class-description">Warning color variant (#c28213)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--success</div>
+                    <div class="class-description">Success color variant (#0f973d)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--neutral</div>
+                    <div class="class-description">Neutral color variant (#2a303c)</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--filled-stroke</div>
+                    <div class="class-description">Filled background with stroke border</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--soft-fill-stroke</div>
+                    <div class="class-description">Transparent background with colored stroke</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--stroke</div>
+                    <div class="class-description">Stroke only style with transparent background</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--icon-leading</div>
+                    <div class="class-description">Icon positioned before text</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--icon-trailing</div>
+                    <div class="class-description">Icon positioned after text</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge__icon</div>
+                    <div class="class-description">Icon container element</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge__content</div>
+                    <div class="class-description">Content container for text and icons</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">.forge-badge--disabled</div>
+                    <div class="class-description">Disabled state with reduced opacity</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to badges
+            const badges = document.querySelectorAll('.forge-badge');
+            badges.forEach(badge => {
+                badge.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-1px)';
+                    this.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+                });
+                
+                badge.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Add click effects to stat cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

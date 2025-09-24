@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badge Component - Complete Figma Implementation</title>
+    <link rel="stylesheet" href="badge.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Switzer:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="forge-docs">
+      <header class="forge-docs-header">
+        <div class="forge-logo">
+          <h1 class="forge-title">The Forge</h1>
+          <div class="forge-author">
+            <span class="forge-author-badge">by Olusola Oduntan</span>
+          </div>
+        </div>
+        
+        <div class="forge-hero">
+          <h1 class="forge-hero-title">Badge</h1>
+          <p class="forge-hero-subtitle">
+            Pills (also called badges or tags) are compact elements used to display status, categories, or supplementary information. 
+            They support both informational content and interactive behaviors.
+          </p>
+        </div>
+      </header>
+
+      <!-- Component Overview Section -->
+      <section class="forge-section">
+        <h2>Component Overview</h2>
+        <div class="forge-overview-grid">
+          <div class="forge-overview-card">
+            <div class="forge-overview-number">6</div>
+            <div class="forge-overview-label">Color Variants</div>
+          </div>
+          <div class="forge-overview-card">
+            <div class="forge-overview-number">4</div>
+            <div class="forge-overview-label">Style Variants</div>
+          </div>
+          <div class="forge-overview-card">
+            <div class="forge-overview-number">3</div>
+            <div class="forge-overview-label">Size Options</div>
+          </div>
+          <div class="forge-overview-card">
+            <div class="forge-overview-number">144</div>
+            <div class="forge-overview-label">Total Combinations</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="forge-section">
+        <h2>Component Showcase - Figma Variant Structure</h2>
+        <div id="app"></div>
+      </section>
+
+      <section class="forge-section">
+        <h2>Design Tokens Reference</h2>
+        <p>Complete mapping of Figma variables to CSS custom properties. Update the <code>:root</code> values in <code>badge.css</code> to match your exact Figma specifications.</p>
+        
+        <div class="forge-table-wrap">
+          <table class="forge-table" aria-label="Design Tokens Reference Table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Figma Variable</th>
+                <th>Value</th>
+                <th>CSS Custom Property</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Text Primary</td><td>text-primary</td><td>#2a303c</td><td><code>--forge-text-primary</code></td></tr>
+              <tr><td>Text Secondary</td><td>text-secondary</td><td>#555963</td><td><code>--forge-text-secondary</code></td></tr>
+              <tr><td>Text On Brand Light</td><td>text-on-brand-light</td><td>#ffffff</td><td><code>--forge-text-on-brand-light</code></td></tr>
+              <tr><td>Action Primary</td><td>action-primary-default</td><td>#2b62ed</td><td><code>--forge-action-primary</code></td></tr>
+              <tr><td>Action Secondary</td><td>action-secondary-default</td><td>#d17b3b</td><td><code>--forge-action-secondary</code></td></tr>
+              <tr><td>Error Primary</td><td>error-feedback-error-primary</td><td>#d42620</td><td><code>--forge-error-primary</code></td></tr>
+              <tr><td>Warning Primary</td><td>warning-feedback-warning-primary</td><td>#f3a218</td><td><code>--forge-warning-primary</code></td></tr>
+              <tr><td>Success Primary</td><td>sucess-feedback-success-primary</td><td>#0f973d</td><td><code>--forge-success-primary</code></td></tr>
+              <tr><td>Error Surface</td><td>error-feedback-error-surface</td><td>#fbe9e9</td><td><code>--forge-error-surface</code></td></tr>
+              <tr><td>Warning Surface</td><td>warning-feedback-error-surface</td><td>#fef6e8</td><td><code>--forge-warning-surface</code></td></tr>
+              <tr><td>Success Surface</td><td>sucess-feedback-success-surface</td><td>#e5f5eb</td><td><code>--forge-success-surface</code></td></tr>
+              <tr><td>Volt Blue 50</td><td>volt-blue-blue-50</td><td>#eaeffd</td><td><code>--forge-volt-blue-50</code></td></tr>
+              <tr><td>Highlight 50</td><td>highlight-secondary-highlight-50</td><td>#fff4ed</td><td><code>--forge-highlight-50</code></td></tr>
+              <tr><td>Space 0</td><td>space-space-0</td><td>0px</td><td><code>--forge-space-0</code></td></tr>
+              <tr><td>Space 4</td><td>space-space-4</td><td>4px</td><td><code>--forge-space-4</code></td></tr>
+              <tr><td>Space 12</td><td>space-space-12</td><td>12px</td><td><code>--forge-space-12</code></td></tr>
+              <tr><td>Space 16</td><td>space-large</td><td>16px</td><td><code>--forge-space-16</code></td></tr>
+              <tr><td>Space 32</td><td>space-space-32</td><td>32px</td><td><code>--forge-space-32</code></td></tr>
+              <tr><td>Space 64</td><td>values-64px</td><td>64px</td><td><code>--forge-space-64</code></td></tr>
+              <tr><td>Typography Body Medium</td><td>typography-font-size-body-medium</td><td>16px</td><td><code>--forge-text-body-medium</code></td></tr>
+              <tr><td>Typography Body Small</td><td>typography-font-size-body-small</td><td>14px</td><td><code>--forge-text-body-small</code></td></tr>
+              <tr><td>Typography Caption Small</td><td>typography-font-size-caption-small</td><td>10px</td><td><code>--forge-text-caption-small</code></td></tr>
+              <tr><td>Typography Heading L</td><td>font-size-heading-l</td><td>20px</td><td><code>--forge-text-heading-l</code></td></tr>
+              <tr><td>Typography Heading 1</td><td>typography-font-size-heading-1</td><td>36px</td><td><code>--forge-text-heading-1</code></td></tr>
+              <tr><td>Typography Display Small</td><td>typography-font-size-display-small</td><td>48px</td><td><code>--forge-text-display-small</code></td></tr>
+              <tr><td>Border Radius</td><td>radius-radius-md-lg-2x</td><td>16px</td><td><code>--forge-radius-lg</code></td></tr>
+              <tr><td>Border Width</td><td>stroke-stroke-sm</td><td>1px</td><td><code>--forge-border-width</code></td></tr>
+              <tr><td>Background Fill</td><td>background-fill-background-fill-middle</td><td>#ffffff</td><td><code>--forge-bg-fill</code></td></tr>
+              <tr><td>Background Stroke</td><td>background-stroke-background-stroke-middle</td><td>#f0f1f3</td><td><code>--forge-bg-stroke</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="forge-section">
+        <h2>CSS Classes Reference</h2>
+        <div class="forge-class-ref">
+          <div>
+            <h3>Base Classes</h3>
+            <ul>
+              <li><code>.forge-badge</code> - Main component container</li>
+              <li><code>.forge-badge-label</code> - Text label</li>
+              <li><code>.forge-badge-icon</code> - Icon element</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Figma Variants</h3>
+            <ul>
+              <li><code>.forge-variant-filled</code> - Filled style</li>
+              <li><code>.forge-variant-soft-fill-stroke</code> - Soft fill + stroke style</li>
+              <li><code>.forge-variant-stroke</code> - Stroke style</li>
+              <li><code>.forge-variant-filled-stroke</code> - Filled + stroke style</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Color Variants</h3>
+            <ul>
+              <li><code>.forge-color-primary</code> - Primary blue</li>
+              <li><code>.forge-color-secondary</code> - Secondary orange</li>
+              <li><code>.forge-color-success</code> - Success green</li>
+              <li><code>.forge-color-warning</code> - Warning orange</li>
+              <li><code>.forge-color-error</code> - Error red</li>
+              <li><code>.forge-color-neutral</code> - Neutral gray</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Size Variants</h3>
+            <ul>
+              <li><code>.forge-size-sm</code> - Small size</li>
+              <li><code>.forge-size-md</code> - Medium size</li>
+              <li><code>.forge-size-lg</code> - Large size</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Icon States</h3>
+            <ul>
+              <li><code>.forge-icon-true</code> - With arrow icon</li>
+              <li><code>.forge-icon-false</code> - Without icon</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { useState, useId } = React;
+
+      function ArrowIcon(props) {
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6" {...props}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        );
+      }
+
+      function Badge({ 
+        label = "Get started", 
+        variant = 'filled', 
+        color = 'default', 
+        size = 'md', 
+        icon = false,
+        id 
+      }) {
+        const internalId = useId();
+        const badgeId = id || `forge-badge-${internalId}`;
+        
+        const classes = [
+          'forge-badge',
+          `forge-variant-${variant}`,
+          `forge-color-${color}`,
+          `forge-size-${size}`,
+          `forge-icon-${icon}`
+        ].join(' ');
+
+        return (
+          <span 
+            className={classes} 
+            id={badgeId} 
+            role="status" 
+            aria-label={`Badge: ${label}`}
+          >
+            <span className="forge-badge-label">{label}</span>
+            {icon && (
+              <span className="forge-badge-icon" aria-hidden="true">
+                <ArrowIcon />
+              </span>
+            )}
+          </span>
+        );
+      }
+
+      function Section({ title, children, description }) {
+        return (
+          <div className="forge-showcase-section">
+            <h3>{title}</h3>
+            {description && <p className="forge-section-description">{description}</p>}
+            <div className="forge-badge-grid">{children}</div>
+          </div>
+        );
+      }
+
+      function Showcase() {
+        // Figma Variants - Following exact naming from Figma
+        const figmaVariants = [
+          { name: 'filled', description: 'Filled style - High emphasis with solid background' },
+          { name: 'soft-fill-stroke', description: 'Soft fill + stroke style - Medium emphasis with light background' },
+          { name: 'stroke', description: 'Stroke style - Low emphasis with transparent background' },
+          { name: 'filled-stroke', description: 'Filled + stroke style - Enhanced visibility with border' }
+        ];
+        
+        const colors = ['primary', 'secondary', 'success', 'warning', 'error', 'neutral'];
+        const sizes = ['sm', 'md', 'lg'];
+        const iconStates = [false, true]; // icon=false, icon=true
+
+        // Generate combinations based on Figma variant structure
+        const generateVariantCombinations = (variantName) => {
+          const combinations = [];
+          for (const color of colors) {
+            for (const size of sizes) {
+              for (const icon of iconStates) {
+                combinations.push({ variant: variantName, color, size, icon });
+              }
+            }
+          }
+          return combinations;
+        };
+
+        return (
+          <div className="forge-showcase">
+            {/* Filled Variant - Following Figma naming */}
+            <Section 
+              title="Filled Variant (icon=false/true)" 
+              description="Figma variant: Filled style with icon boolean property"
+            >
+              {generateVariantCombinations('filled').map(({ variant, color, size, icon }) => (
+                <Badge 
+                  key={`${variant}-${color}-${size}-${icon}`} 
+                  variant={variant}
+                  color={color} 
+                  size={size}
+                  icon={icon}
+                />
+              ))}
+            </Section>
+
+            {/* Soft Fill + Stroke Variant - Following Figma naming */}
+            <Section 
+              title="Soft Fill + Stroke Variant (icon=false/true)" 
+              description="Figma variant: Soft fill + stroke style with icon boolean property"
+            >
+              {generateVariantCombinations('soft-fill-stroke').map(({ variant, color, size, icon }) => (
+                <Badge 
+                  key={`${variant}-${color}-${size}-${icon}`} 
+                  variant={variant}
+                  color={color} 
+                  size={size}
+                  icon={icon}
+                />
+              ))}
+            </Section>
+
+            {/* Stroke Variant - Following Figma naming */}
+            <Section 
+              title="Stroke Variant (icon=false/true)" 
+              description="Figma variant: Stroke style with icon boolean property"
+            >
+              {generateVariantCombinations('stroke').map(({ variant, color, size, icon }) => (
+                <Badge 
+                  key={`${variant}-${color}-${size}-${icon}`} 
+                  variant={variant}
+                  color={color} 
+                  size={size}
+                  icon={icon}
+                />
+              ))}
+            </Section>
+
+            {/* Filled + Stroke Variant - Following Figma naming */}
+            <Section 
+              title="Filled + Stroke Variant (icon=false/true)" 
+              description="Figma variant: Filled + stroke style with icon boolean property"
+            >
+              {generateVariantCombinations('filled-stroke').map(({ variant, color, size, icon }) => (
+                <Badge 
+                  key={`${variant}-${color}-${size}-${icon}`} 
+                  variant={variant}
+                  color={color} 
+                  size={size}
+                  icon={icon}
+                />
+              ))}
+            </Section>
+
+            {/* Complete Variant Matrix */}
+            <Section 
+              title="Complete Figma Variant Matrix" 
+              description="All variants with their icon=true/false states as defined in Figma"
+            >
+              {figmaVariants.flatMap((variant) => 
+                generateVariantCombinations(variant.name).map(({ variant: varName, color, size, icon }) => (
+                  <Badge 
+                    key={`matrix-${varName}-${color}-${size}-${icon}`} 
+                    label={`${varName} ${color} ${size} icon=${icon}`}
+                    variant={varName}
+                    color={color} 
+                    size={size}
+                    icon={icon}
+                  />
+                ))
+              )}
+            </Section>
+
+            {/* Individual Variant Examples */}
+            <Section 
+              title="Individual Variant Examples" 
+              description="Detailed examples of each Figma variant showing icon=true and icon=false states"
+            >
+              <div className="forge-variant-examples">
+                <div className="forge-variant-example">
+                  <h4>Filled Variant Examples</h4>
+                  <div className="forge-badge-grid">
+                    <Badge label="Get started" variant="filled" color="primary" size="md" icon={false} />
+                    <Badge label="Get started" variant="filled" color="primary" size="md" icon={true} />
+                    <Badge label="Get started" variant="filled" color="error" size="sm" icon={false} />
+                    <Badge label="Get started" variant="filled" color="error" size="sm" icon={true} />
+                  </div>
+                </div>
+
+                <div className="forge-variant-example">
+                  <h4>Soft Fill + Stroke Variant Examples</h4>
+                  <div className="forge-badge-grid">
+                    <Badge label="Get started" variant="soft-fill-stroke" color="primary" size="md" icon={false} />
+                    <Badge label="Get started" variant="soft-fill-stroke" color="primary" size="md" icon={true} />
+                    <Badge label="Get started" variant="soft-fill-stroke" color="warning" size="sm" icon={false} />
+                    <Badge label="Get started" variant="soft-fill-stroke" color="warning" size="sm" icon={true} />
+                  </div>
+                </div>
+
+                <div className="forge-variant-example">
+                  <h4>Stroke Variant Examples</h4>
+                  <div className="forge-badge-grid">
+                    <Badge label="Get started" variant="stroke" color="primary" size="md" icon={false} />
+                    <Badge label="Get started" variant="stroke" color="primary" size="md" icon={true} />
+                    <Badge label="Get started" variant="stroke" color="success" size="sm" icon={false} />
+                    <Badge label="Get started" variant="stroke" color="success" size="sm" icon={true} />
+                  </div>
+                </div>
+
+                <div className="forge-variant-example">
+                  <h4>Filled + Stroke Variant Examples</h4>
+                  <div className="forge-badge-grid">
+                    <Badge label="Get started" variant="filled-stroke" color="primary" size="md" icon={false} />
+                    <Badge label="Get started" variant="filled-stroke" color="primary" size="md" icon={true} />
+                    <Badge label="Get started" variant="filled-stroke" color="neutral" size="sm" icon={false} />
+                    <Badge label="Get started" variant="filled-stroke" color="neutral" size="sm" icon={true} />
+                  </div>
+                </div>
+              </div>
+            </Section>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('app'));
+      root.render(<Showcase />);
+    </script>
+  </body>
+</html>
